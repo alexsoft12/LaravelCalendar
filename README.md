@@ -1,6 +1,9 @@
 ## Screenshot of calendar with minimal configuration
 ![Screenshot](img/screenshot.png)
 
+## License
+No license was included with original code. Awaiting licensing details from upstream. Any changes made as of this repo are licensed AGPL.
+
 ## Installation
 
 Install the package through [Composer](http://getcomposer.org/). Edit your project's `composer.json` file by adding:
@@ -8,7 +11,7 @@ Install the package through [Composer](http://getcomposer.org/). Edit your proje
 ```php
 "require": {
 	"laravel/framework": "4.0.*",
-	"vics80/calendar": "dev-master"
+	"ITwrx/calendar": "dev-master"
 }
 ```
 
