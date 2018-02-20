@@ -14,6 +14,9 @@ class CalendarGenerator {
 	protected $next_prev_url   	= '';
 	protected $segments        	= false;
     protected $eventContainer = "<p {attr}>{event}</p>";
+    
+    // protected $eventContainer = "{event}";
+    
 
 	/**
 	 * Constructor
@@ -24,6 +27,10 @@ class CalendarGenerator {
 	{
 		$this->local_time = time();
 		$this->next_prev_url = $request->url();
+		//not sure how to use above as it includes previous year and month from previous iteration in second iteration, so we hardcode the base url ourselves to avoid doubling the year and month on 2+ requests.
+		//also, this was a config variable so we use that for this.
+		//$this->next_prev_url = ''.url('/').'/full-clinic-schedule/';	
+		
 		Lang::addNamespace('calendar', __DIR__ . '/../../lang');
 	}
 
@@ -98,8 +105,8 @@ class CalendarGenerator {
 		while ($day > 1)
 		{
 			$day -= 7;
-		}
-
+		}		
+		
 		// Set the current month/year/day
 		// We use this to determine the "today" date
 		$cur_year	= date('Y', $this->local_time);
@@ -184,10 +191,13 @@ class CalendarGenerator {
 
                         if (is_array($data[$day])) {
                             $several_events = '';
+                            $title = '';
                             foreach ($data[$day] as $event)
                             {
 
                                 $several_events .= str_replace('{event}', $event['content'], $this->eventContainer);
+                                
+                                $title .= str_replace('{event}', $event['title'], $this->eventContainer);
 
                                 if (!empty($event['attr'])) {
                                     $attr = "";
@@ -198,9 +208,14 @@ class CalendarGenerator {
                                     $several_events = str_replace('{attr}', trim($attr), $several_events);
                                 }
                             }
-                            $out .= str_replace('{day}', $day, str_replace('{content}', $several_events, $temp));
+                            
+                           //$out .= str_replace('{day}', $day, str_replace('{content}', $several_events, $temp));
+                            //$out .= str_replace('{title}', $day, str_replace('{content}', $several_events, $temp));
+                            $out .= str_replace('{day}', $day, str_replace('{title}', $title, str_replace('{content}', $several_events, $temp)));
+                            //$out .= str_replace('{title}', $title, $temp);
+                            //$out .= str_replace('{day}', null, str_replace('{title}', $several_events, $temp));
                         } else {
-                            $out .= str_replace('{day}', $day, str_replace('{content}', $data[$day], $temp));
+                            $out .= str_replace('{day}', $day, str_replace('{content}', $data[$day]));
                         }
 
                     }
