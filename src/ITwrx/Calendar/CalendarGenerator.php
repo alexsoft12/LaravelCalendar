@@ -1,4 +1,4 @@
-<?php namespace Vics80\Calendar;
+<?php namespace ITwrx\Calendar;
 
 use Lang;
 
