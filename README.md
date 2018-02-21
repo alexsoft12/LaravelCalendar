@@ -1,7 +1,8 @@
 ## you probably don't want to use this repo until this notice has been removed.
 
-## Screenshot of calendar with minimal configuration
+## Screenshot
 ![Screenshot](img/cal_screen.png)
+Calendar shows event title as link to event page when scheduled for a given date.
 
 ## License
 No license was included with original code. Awaiting licensing details from upstream. Any changes made as of this repo are licensed AGPL.
