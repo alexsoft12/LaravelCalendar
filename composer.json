@@ -18,5 +18,15 @@
             "ITwrx\\Calendar": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "extra": {
+    "laravel": {
+        "providers": [
+            "ITwrx\\Calendar\\CalendarServiceProvider"
+        ],
+        "aliases": {
+            "Calendar": "ITwrx\\Calendar\\Facades\\Calendar"
+        }
+    }
+},
 }
