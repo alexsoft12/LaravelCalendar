@@ -21,13 +21,13 @@ Next, run the Composer update command from the Terminal:
 
 Now all you have to do is add the service provider of the package and alias the package. To do this open your `config/app.php` file.
 
-Add a new line to the `service providers` array:
+Add a new line to the `service providers` array (not required for l5.5+):
 
-	'Vics80\Calendar\CalendarServiceProvider'
+	'ITwrx\Calendar\CalendarServiceProvider'
 
-And finally add a new line to the `aliases` array:
+And finally add a new line to the `aliases` array (not required for l5.5+):
 
-	'Calendar' => 'Vics80\Calendar\Facades\Calendar',
+	'Calendar' => 'ITwrx\Calendar\Facades\Calendar',
 
 Now you're ready to start using the calendar package in your application.
 
