@@ -10,7 +10,7 @@ Install the package through [Composer](http://getcomposer.org/). Edit your proje
 
 ```php
 "require": {
-	"laravel/framework": "4.0.*",
+	"laravel/framework": "5.5.*",
 	"ITwrx/calendar": "dev-master"
 }
 ```
