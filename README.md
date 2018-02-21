@@ -1,7 +1,7 @@
 ## you probably don't want to use this repo until this notice has been removed.
 
 ## Screenshot of calendar with minimal configuration
-![Screenshot](img/screenshot.png)
+![Screenshot](img/cal_screen.png)
 
 ## License
 No license was included with original code. Awaiting licensing details from upstream. Any changes made as of this repo are licensed AGPL.
@@ -28,17 +28,18 @@ Next, run the Composer update command from the Terminal:
 
     composer update
 
-Now all you have to do is add the service provider of the package and alias the package. To do this open your `config/app.php` file.
+If you are using laravel 5.5.*, you are done installing. 
 
-Add a new line to the `service providers` array (not required for l5.5+):
+If you want to try this package with older versions of laravel you can add the service provider of the package and alias the package. To do this open your `config/app.php` file.
+
+Add a new line to the `service providers` array:
 
 	'ITwrx\Calendar\CalendarServiceProvider'
 
-And finally add a new line to the `aliases` array (not required for l5.5+):
+And finally add a new line to the `aliases` array:
 
 	'Calendar' => 'ITwrx\Calendar\Facades\Calendar',
 
-Now you're ready to start using the calendar package in your application.
 
 ## Usage
 
