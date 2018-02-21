@@ -1,3 +1,5 @@
+## you probably don't want to use this repo until this notice has been removed.
+
 ## Screenshot of calendar with minimal configuration
 ![Screenshot](img/screenshot.png)
 
@@ -9,11 +11,22 @@ No license was included with original code. Awaiting licensing details from upst
 Install the package through [Composer](http://getcomposer.org/). Edit your project's `composer.json` file by adding:
 
 ```php
-"require": {
-	"laravel/framework": "5.5.*",
-	"ITwrx/calendar": "dev-master"
-}
+
+"ITwrx/calendar": "dev-master"
+
 ```
+to your "require" block and
+```php
+
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ITwrx/LaravelCalendar"
+        }
+    ]
+
+```
+as the last block.
 
 Next, run the Composer update command from the Terminal:
 
