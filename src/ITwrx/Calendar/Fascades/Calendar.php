@@ -1,4 +1,4 @@
-<?php namespace Itwrx\Calendar\Facades;
+<?php namespace ITwrx\Calendar\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
