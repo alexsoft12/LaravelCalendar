@@ -215,7 +215,7 @@ class CalendarGenerator {
                             //$out .= str_replace('{title}', $title, $temp);
                             //$out .= str_replace('{day}', null, str_replace('{title}', $several_events, $temp));
                         } else {
-                            $out .= str_replace('{day}', $day, str_replace('{content}', $data[$day]));
+                            $out .= str_replace('{day}', $day, str_replace('{content}', $data[$day], $temp));
                         }
 
                     }
