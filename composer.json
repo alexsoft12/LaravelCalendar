@@ -1,12 +1,11 @@
 {
-    "name": "alexsoft12/calendar",
+    "name": "alexsoft/calendar",
     "description": "Laravel 5 Calendar, based on gloudemans/calendar",
     "keywords": ["laravel", "calendar"],
     "authors": [
         {
             "name": "Yuler Figueroa",
-            "email": "yuleralex1@gmail.com",
-            "name": "alexsoft12"            
+            "email": "yuleralex1@gmail.com"            
         }
     ],
     "require": {
